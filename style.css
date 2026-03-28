@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #00ff91;
+  font-family: Arial, sans-serif;
+  color: #333333;
+  padding: 20px;
+}
+
+h1 {
+  color: #2c3e50;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #4f80a0;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+img {
+  width: 50px;
+  border-radius: 10px;
+}
+
+a {
+  color: #e74c3c;
+}
+
+/* ---classes--- */
+
+.about-section {
+  background-color: lightblue;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.highlight {
+  color: red;
+  font-weight: bold;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background-color: #2980b9;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.self-section {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.self-section button {
+  margin-bottom: 10px;
+}
+
+.self-section form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+table {
+  padding: 20px;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #333;
+  padding: 8px 16px;
+}
+
