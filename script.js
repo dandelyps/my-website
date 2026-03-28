@@ -164,3 +164,26 @@ for (let i = 0; i < friends.length; i++) {
     </div>
   `;
 }
+
+function wait(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function loadUsers() {
+  const response = await fetch("https://jsonplaceholder.typicode.com/users");
+  const users = await response.json();
+
+  const userCards = document.getElementById("userCards");
+
+  users.forEach((user) => {
+    userCards.innerHTML += `
+      <div class="card">
+        <h3>${user.name}</h3>
+        <p>Email: ${user.email}</p>
+        <p>City: ${user.address.city}</p>
+      </div>
+    `;
+  });
+}
+
+loadUsers();
