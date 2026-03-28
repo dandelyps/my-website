@@ -187,3 +187,29 @@ async function loadUsers() {
 }
 
 loadUsers();
+
+async function loadPLMatches() {
+  const response = await fetch("https://www.thesportsdb.com/api/v1/json/3/eventsnextleague.php?id=4328");
+  const data = await response.json();
+  const matches = data.events;
+
+  const matchCards = document.getElementById("matchCards");
+
+  matches.forEach((match) => {
+    matchCards.innerHTML += `
+      <div class="card">
+        <p style="font-size: 12px; color: gray;">${match.strLeague} — ${match.dateEvent}</p>
+        <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+          <img src="${match.strHomeTeamBadge}" style="width: 40px;">
+          <strong>${match.strHomeTeam}</strong>
+          <span>vs</span>
+          <strong>${match.strAwayTeam}</strong>
+          <img src="${match.strAwayTeamBadge}" style="width: 40px;">
+        </div>
+        <p style="font-size: 13px;">⏰ ${match.strTime} | 🏟️ ${match.strVenue}</p>
+      </div>
+    `;
+  });
+}
+
+loadPLMatches();
